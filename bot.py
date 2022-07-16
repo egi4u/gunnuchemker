@@ -77,7 +77,8 @@ async def tv(message: types.Message):
 <b>COMBO</b>➟ <code>{ac}</code>
 <b>STATUS</b>➟ ❌WRONG DETAILS
 TOOK ➟ <b>{toc - tic:0.4f}</b>(s)
-<b>CHKBY</b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
+<b>CHECKED BY</b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
+<b>Bot:</b> @SinnerskhBot
 """)
     elif "PASS" in r.text:
         res = r.json()
@@ -87,7 +88,8 @@ TOOK ➟ <b>{toc - tic:0.4f}</b>(s)
 <b>LEVEL</b>➟ {res['details']['bearType']}
 <b>VALIDTILL</b>➟ {res['details']['fullVersionUntil']}
 TOOK ➟ <b>{toc - tic:0.4f}</b>(s)
-<b>CHKBY</b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
+<b>CHEKED BY</b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
+<b>Bot:</b> @SinnerskhBot
 """)
     else:
         await message.reply("Error❌: REQ failed")
@@ -109,7 +111,7 @@ async def binio(message: types.Message):
 <b>BIN INFO</b>
 <code>{k.get_text()[62:]}</code>
 CheckedBy: <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
-<b>Bot:</b> @GunnuChkBot
+<b>Bot:</b> @SinnerskhBot
 ╘═════════
 """
     await message.reply(INFO)
@@ -215,7 +217,8 @@ async def ch(message: types.Message):
 <b>STATUS</b>➟ #ApprovedCCN
 <b>MSG</b>➟ {msg}
 <b>TOOK:</b> <code>{toc - tic:0.4f}</code>(s)
-<b>CHKBY</b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
+<b>CHECKED BY</b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
+<b>Bot:</b> @SinnerskhBot
 """)
     elif "Unrecognized request URL" in rx.text:
         await message.reply("[UPDATE] PROXIES ERROR")
@@ -224,7 +227,8 @@ async def ch(message: types.Message):
 ✔️<b>CC</b>➟ <code>{cc}</code>
 <b>STATUS</b>➟ #ApprovedCVV
 <b>TOOK:</b> <code>{toc - tic:0.4f}</code>(s)
-<b>CHKBY</b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
+<b>CHEKED BY</b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
+<b>Bot:</b> @SinnerskhBot
 """)
     else:
         await message.reply(f"""
@@ -232,8 +236,10 @@ async def ch(message: types.Message):
 <b>STATUS</b>➟ Declined
 <b>MSG</b>➟ {msg}
 <b>TOOK:</b> <code>{toc - tic:0.4f}</code>(s)
-<b>CHKBY</b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
+<b>CHEKED BY</b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
+<b>Bot:</b> @SinnerskhBot
 """)  
+       
     
     
 if __name__ == '__main__':
